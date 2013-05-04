@@ -396,7 +396,7 @@ static NSProgressIndicator* OakCreateProgressIndicator ()
 	CONSTRAINT(@"V:[count(==21)]",                                     NSLayoutFormatAlignAllLeft|NSLayoutFormatAlignAllRight);
 	CONSTRAINT(@"H:|-(>=20,==20@75)-[replaceLabel]-[replace]",         0);
 	CONSTRAINT(@"H:[replace]-(5)-[replaceHistory]",                    NSLayoutFormatAlignAllTop);
-	CONSTRAINT(@"V:|-[find]-[replace]",                                NSLayoutFormatAlignAllLeft|NSLayoutFormatAlignAllRight);
+	CONSTRAINT(@"V:|-[find(>=22)]-[replace(>=22)]",                                NSLayoutFormatAlignAllLeft|NSLayoutFormatAlignAllRight);
 
 	[_myConstraints addObject:[NSLayoutConstraint constraintWithItem:self.findLabel attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.findTextField attribute:NSLayoutAttributeTop multiplier:1 constant:3]];
 	[_myConstraints addObject:[NSLayoutConstraint constraintWithItem:self.replaceLabel attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.replaceTextField attribute:NSLayoutAttributeTop multiplier:1 constant:3]];
